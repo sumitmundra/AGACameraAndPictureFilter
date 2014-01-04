@@ -72,13 +72,13 @@
     [super viewDidLoad];
     self.wantsFullScreenLayout = YES;
     //set background color
-    self.view.backgroundColor = [UIColor colorWithPatternImage:
-                                 [UIImage imageNamed:@"micro_carbon"]];
+//    self.view.backgroundColor = [UIColor colorWithPatternImage:
+//                                 [UIImage imageNamed:@"micro_carbon"]];
+//    
+//    self.photoBar.backgroundColor = [UIColor colorWithPatternImage:
+//                                     [UIImage imageNamed:@"photo_bar"]];
     
-    self.photoBar.backgroundColor = [UIColor colorWithPatternImage:
-                                     [UIImage imageNamed:@"photo_bar"]];
-    
-    self.topBar.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"photo_bar"]];
+//    self.topBar.backgroundColor = [UIColor orangeColor];
     //button states
     [self.blurToggleButton setSelected:NO];
     [self.filtersToggleButton setSelected:NO];
@@ -410,7 +410,7 @@
         
         [self prepareFilter];
         [self.retakeButton setHidden:NO];
-        [self.photoCaptureButton setTitle:@"Done" forState:UIControlStateNormal];
+        [self.photoCaptureButton setTitle:@"Finish" forState:UIControlStateNormal];
         [self.photoCaptureButton setImage:nil forState:UIControlStateNormal];
         [self.photoCaptureButton setEnabled:YES];
         if(![self.filtersToggleButton isSelected]){
