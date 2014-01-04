@@ -11,6 +11,7 @@
                 <outlet property="cameraToggleButton" destination="37" id="48"/>
                 <outlet property="cancelButton" destination="36" id="44"/>
                 <outlet property="filterScrollView" destination="16" id="69"/>
+                <outlet property="filterViewBottomConstraint" destination="snR-ci-Skc" id="MUQ-oy-SSB"/>
                 <outlet property="filtersToggleButton" destination="35" id="64"/>
                 <outlet property="flashToggleButton" destination="77" id="78"/>
                 <outlet property="imageView" destination="7" id="43"/>
@@ -27,8 +28,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7" userLabel="Preview ImageView" customClass="GPUImageView">
-                    <rect key="frame" x="0.0" y="121" width="320" height="320"/>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="7" userLabel="Preview ImageView" customClass="GPUImageView">
+                    <rect key="frame" x="0.0" y="89" width="320" height="379"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
@@ -38,9 +39,12 @@
                         <outletCollection property="gestureRecognizers" destination="89" appends="YES" id="90"/>
                     </connections>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16" userLabel="FilterScrollView">
-                    <rect key="frame" x="0.0" y="525" width="320" height="75"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16" userLabel="FilterScrollView">
+                    <rect key="frame" x="0.0" y="524" width="320" height="75"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="Oi7-Fy-SRt"/>
+                    </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34" userLabel="Top Bar View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -236,10 +240,17 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" id="229-kn-H3S"/>
                 <constraint firstAttribute="trailing" secondItem="34" secondAttribute="trailing" id="6av-i6-zbt"/>
                 <constraint firstItem="34" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="8U9-6d-69c"/>
+                <constraint firstItem="16" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="56" id="HGW-rs-B69"/>
+                <constraint firstItem="7" firstAttribute="top" secondItem="34" secondAttribute="bottom" constant="39" id="O4I-O5-IEc"/>
+                <constraint firstAttribute="trailing" secondItem="16" secondAttribute="trailing" id="Sjb-cQ-9BS"/>
                 <constraint firstItem="31" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="aOy-Xy-9jD"/>
+                <constraint firstItem="16" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="gpB-Df-GTm"/>
                 <constraint firstAttribute="trailing" secondItem="31" secondAttribute="trailing" id="oEp-hL-FMX"/>
+                <constraint firstItem="7" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="qUa-LS-615"/>
+                <constraint firstAttribute="bottom" secondItem="16" secondAttribute="bottom" constant="-31" id="snR-ci-Skc"/>
                 <constraint firstAttribute="bottom" secondItem="31" secondAttribute="bottom" constant="-1" id="wek-bs-cFa"/>
                 <constraint firstItem="31" firstAttribute="top" secondItem="34" secondAttribute="bottom" constant="475" id="wqM-1F-ZFp"/>
                 <constraint firstItem="34" firstAttribute="top" secondItem="4" secondAttribute="top" id="zb1-yx-ul7"/>
